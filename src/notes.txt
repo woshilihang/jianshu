@@ -1,0 +1,38 @@
+学习笔记
+React
+组件化
+单向数据流
+jsx语法解决转义问题
+直接使用utf8转义后的字符
+使用dnagerouslySetInnerHTML
+<div dangerouslySetInnerHTML={_html: 'cc&copy;2015'}></div>
+
+
+// ---------------------
+关于react-redux中的Provider， connect的解析
+provider提供react-redux给react提供的一个组件
+作用： 把store传递给其子组件
+// 使用redux的createStore方法创建一个store
+const store = createStore(todoApp, {});
+
+// 把store作为一个prop传给provider组件
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('root'));
+
+
+// connect
+connect([mapStateToProps], [mapDispathToProps])(Header);
+
+
+// 把指定的state & 指定的action 和 React组件 连接起来 ==>  容器组件
+
+
+
+// react-router-dom
+动态路由匹配方式 /detail/:id  通过this.props.match.params.id获取
+字符串拼接url地址 /detail?id=1 通过this.props.location.search中提取
+
+// widthRouter能够让在异步组件中拿到所有的路由参数
+// 在使用react-loadable分块加载组件内容避免首页拿到所有内容文件过大的问题
