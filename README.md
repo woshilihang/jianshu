@@ -1,7 +1,7 @@
 > react重构重构简书项目
 
 
-设计知识点：
+设计知识点： </br>
     1） virtual dom </br>
     2） 组件化 </br>
     3） react语法 </br>
